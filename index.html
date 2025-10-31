@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Cartoon Platformer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Heads-up Display -->
+  <div id="hud">
+    <div class="hud-item"><span id="score">Score: 0</span></div>
+    <div class="hud-item"><span id="level">Level: 1</span></div>
+  </div>
+
+  <!-- Game Canvas -->
+  <canvas id="game" width="960" height="540" aria-label="Game canvas" role="img"></canvas>
+
+  <!-- Start Screen -->
+  <div id="startScreen" class="overlay visible" aria-live="polite">
+    <div class="panel">
+      <h1>🎮 Cartoon Platformer</h1>
+      <p>Reach the shiny star! Collect coins. Don’t fall. Have fun!</p>
+      <ul class="instructions">
+        <li>Desktop: Arrow keys or A/D to move, W/Up/Space to jump</li>
+        <li>Mobile: Use on-screen buttons</li>
+      </ul>
+      <button id="btnPlay" class="btn primary">Play Game</button>
+    </div>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div id="gameOverScreen" class="overlay" aria-live="polite">
+    <div class="panel">
+      <h2>💥 Game Over!</h2>
+      <p>Whoops! You fell into the void of silliness.</p>
+      <button id="btnRestart" class="btn">Restart</button>
+    </div>
+  </div>
+
+  <!-- Win Screen -->
+  <div id="winScreen" class="overlay" aria-live="polite">
+    <div class="panel">
+      <h2>🌟 You Win!</h2>
+      <p>Shiny star acquired. Victory dance time!</p>
+      <button id="btnPlayAgain" class="btn">Play Again</button>
+    </div>
+  </div>
+
+  <!-- Mobile Controls -->
+  <div id="controls" aria-hidden="true">
+    <button id="btnLeft" class="ctrl">◀</button>
+    <button id="btnJump" class="ctrl">⭥</button>
+    <button id="btnRight" class="ctrl">▶</button>
+  </div>
+
+  <!-- Optional background music (replace src with your file if desired) -->
+  <!-- <audio id="bgm" src="music-loop.mp3" loop preload="auto"></audio> -->
+
+  <script defer src="script.js"></script>
+</body>
+</html>
